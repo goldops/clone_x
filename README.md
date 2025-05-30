@@ -7,6 +7,7 @@ This project runs a fullstack web application using Docker and Docker Compose. I
 
 ## 🗂 Directory Structure
 
+```
 project-root/
 ├── docker-compose.yml
 ├── clone_x_backend/
@@ -15,7 +16,7 @@ project-root/
 ├── clone_x_frontend/
 │ └── Dockerfile
 │ └── [frontend source code]
-
+```
 
 ---
 
