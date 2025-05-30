@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./clone_x_backend
+    healthcheck:
+      test: ["CMD", "curl", "localhost:5000/tweets?content="]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build:
+      context: ./clone_x_frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
